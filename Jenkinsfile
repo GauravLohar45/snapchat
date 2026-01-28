@@ -19,10 +19,11 @@ pipeline {
             }
         }
 
-        stage('Archive Artifact') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            }
-        }
+      stage('Archive Artifact') {
+    steps {
+        archiveArtifacts artifacts: 'target/*.war'
+    }
+}
+
     }
 }
